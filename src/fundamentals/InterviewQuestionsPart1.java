@@ -3,6 +3,9 @@ package fundamentals;
 public class InterviewQuestionsPart1 {
 
 
+private static final String Number = null;
+
+
 public static void swapValuesWithoutUsing3rdVariable() {
 	System.out.println("-----------------swap values without using third variable--------------");
 	int a = 100;
@@ -82,14 +85,39 @@ public static void swapValuesWithoutUsing3rdVariable() {
 
 
 		}
+		
+
+		public static void checkArmstrongNumber(int number) {
+		    
+		    
+		        int tempNum = number;
+		        int sum =0;
+		        
+		        	
+		        while (tempNum > 0) {
+		            int remainder = tempNum % 10;
+		          sum= sum+(remainder*remainder*remainder);
+		            tempNum = tempNum/10;
+		        }
+
+		    
+		        if (sum == number) {
+		            System.out.println(number + "  Number is an Armstrong number.");
+		        } else {
+		            System.out.println(number + "  Number is not an Armstrong number.");
+		        
+		    }
+		}
+		    
+
 	public static void main(String[] args) {
 //	swapValuesWithoutUsing3rdVariable();
 //	swapStringValuesWithoutUsing3rdVariable();
 //	printOddNumbers(1,20);
 //	checkPrimeNumber(3);
 
-		printPrimeNumberBetweenGivenRange(1,100);
-
-
+//		printPrimeNumberBetweenGivenRange(1,100);
+		checkArmstrongNumber(153);
+	
 }
 }
